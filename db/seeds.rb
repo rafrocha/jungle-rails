@@ -47,7 +47,7 @@ cat1.products.create!({
   name:  'Women\'s Zebra pants',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
-  quantity: 18,
+  quantity: 0,
   price: 124.99
 })
 
@@ -71,7 +71,7 @@ cat1.products.create!({
   name:  'Russian Spy Shoes',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel5.jpg'),
-  quantity: 8,
+  quantity: 0,
   price: 1_225.00
 })
 
@@ -88,7 +88,7 @@ cat2.products.create!({
   name:  'Modern Skateboards',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics1.jpg'),
-  quantity: 40,
+  quantity: 0,
   price: 164.49
 })
 
@@ -120,7 +120,7 @@ cat3.products.create!({
   name:  'Electric Chair',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture2.jpg'),
-  quantity: 2,
+  quantity: 0,
   price: 987.65
 })
 
