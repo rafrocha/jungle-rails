@@ -67,4 +67,9 @@ class OrdersController < ApplicationController
     total
   end
 
+  def order_total
+    orderTotal = cart_total
+    return orderTotal
+  end
+
 end
