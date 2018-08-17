@@ -22,8 +22,57 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+          <dt>Reviews</dt>
+          <dd>
+            <% @reviews.each do |review| %>
+              <% user = User.find_by(id: review.user_id)%>
+              <strong><%= user.first_name %> <%= user.last_name %></strong> - <% i = review.rating %>
+              <% j = 1 %>
+                  <% loop do %>
+                  <% if i > 0 %>
+                  <%= fa_icon 'star', class: 'review-star'%>
+                  <% else %>
+                  <%= fa_icon 'star'%>
+                  <% end %>
+                  <% i -= 1 %>
+                  <% j += 1 %>
+                  <% if j == 6 %>
+                  <% break %>
+                  <% end %>
+                  <% end %>:<br>
+              <%= review.description %><br>
+              <% if user.id == current_user.id%>
+              <%= link_to fa_icon('trash'), product_review_path(product_id: @product.id, id: review.id), method: :delete %>
+              <% end %><br>
+            <% end %></dd>
         </dl>
       </div>
+    </div>
+
+     <div class="col-sm-6">
+      <% if current_user %>
+        <%= form_for @product, url: product_reviews_path(@product), method: 'post' do |form| %>
+          <% if form.object.errors.any? %>
+            <div class="alert alert-danger">
+              <strong>The following errors prevented saving:</strong>
+              <ul>
+                <% form.object.errors.full_messages.each do |error| %>
+                  <li><%= error %></li>
+            <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <%= form.fields_for :reviews do |review| %>
+            <div class="form-group">
+              <%= review.label :'Review this product:' %>
+              <%= review.text_area :description, class: 'form-control' %>
+              <%= review.label :Rating %>
+              <%= review.select :rating, options_for_select([1,2,3,4,5]), class: 'form-control' %>
+            </div>
+          <% end %>
+          <%= form.submit 'Create Review', class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
     </div>
 
   </article>

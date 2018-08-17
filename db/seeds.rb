@@ -29,6 +29,11 @@ cat1 = Category.find_or_create_by! name: 'Apparel'
 cat2 = Category.find_or_create_by! name: 'Electronics'
 cat3 = Category.find_or_create_by! name: 'Furniture'
 
+## USERS
+
+user1 = User.find_or_create_by! first_name: 'Raf', last_name: 'Rocha', email: 'rafrocha@rocha.com', password_digest: 'dsds'
+user2 = User.find_or_create_by! first_name: 'Martina', last_name: 'Garicochea', email: 'mgarico@prato.com', password_digest: 'dsds'
+
 ## PRODUCTS
 
 puts "Re-creating Products ..."
@@ -132,5 +137,27 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+puts "Re-creating Fake Reviews ..."
+
+prod1 = Product.find_or_create_by! name: 'Optimal Sleeping Bed'
+prod2 = Product.find_or_create_by! name: 'Red Bookshelf'
+
+prod1.reviews.create!({
+  description: "Ridiculous. hate it!",
+  user_id: 1,
+  rating: 2
+})
+
+prod1.reviews.create!({
+  description: "Love it. The color matches my ears! Def 5/5!",
+  user_id: 2,
+  rating: 5
+})
+
+prod2.reviews.create!({
+  description: "It's alright I guess. For this price, I could've bought a house...",
+  user_id: 2,
+  rating: 3
+})
 
 puts "DONE!"
