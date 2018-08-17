@@ -14,7 +14,7 @@
       <% @order_total = 0 %>
       <% @order.line_items.each do |details| %>
       <%= render 'item', details: details %>
-        <% end %>
+      <% end %>
     </p>
     Your total is: $<%= @order_total %>
     <p>Thanks for joining and have a great day!</p>

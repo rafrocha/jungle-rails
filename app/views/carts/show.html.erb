@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if cart.length != 0  %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -32,8 +32,7 @@
       </tfoot>
     </table>
   </div>
-
-  <div class="row">
+   <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
         <script
@@ -49,5 +48,12 @@
       <% end %>
     </div>
   </div>
+
+  <% else %>
+  <div>
+    Your cart is empty
+  </div>
+  <%= link_to 'Home', '/' %>
+  <%end%>
 
 </section>
