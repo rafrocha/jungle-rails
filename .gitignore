@@ -15,6 +15,11 @@
 # Ignore db creds / settings
 /config/database.yml
 
+.DS_Store
+app/.DS_Store
+app/assets/.DS_Store
+app/assets/images/.DS_Store
+
 *.rbc
 capybara-*.html
 .rspec
