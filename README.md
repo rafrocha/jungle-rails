@@ -1,7 +1,8 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
 
+<!-- !["Screenshot of admin orders updated"](https://github.com/aaronfordnet/midterm/blob/master/docs/orders-status.png?raw=true) -->
 
 ## Setup
 

@@ -10,6 +10,16 @@
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>
     <% end %>
+    <% stars = 0 %>
+    <% average = 0 %>
+    <% product.reviews.each do |review| %>
+    <% stars += review.rating %>
+    <% end %>
+    <% if product.reviews.length > 0 %>
+    <%= fa_icon 'star', class: 'review-star'%>
+    <% average = (stars).to_f / product.reviews.length %>
+    <%= number_with_precision(average, :precision => 1) %>
+    <% end %>
   </header>
   <p class="description">
     <%= product.description %>
