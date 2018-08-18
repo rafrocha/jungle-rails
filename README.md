@@ -2,7 +2,19 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of learning Rails by example.
 
-<!-- !["Screenshot of admin orders updated"](https://github.com/aaronfordnet/midterm/blob/master/docs/orders-status.png?raw=true) -->
+!["Screenshot of Cart"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/cart-page.png?raw=true)
+
+!["Screenshot of Single Item Page"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/item-page.png?raw=true)
+
+!["Screenshot of Main Page"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/main-page.png?raw=true)
+
+!["Screenshot of New Product"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/new-product.png?raw=true)
+
+!["Screenshot of Order Placed"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/order-placed.png?raw=true)
+
+!["Screenshot of Product List"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/products-list.png?raw=true)
+
+!["Screenshot of Register User"](https://github.com/rafrocha/jungle-rails/blob/master/app/assets/images/register.png?raw=true)
 
 ## Setup
 
